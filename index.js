@@ -55,7 +55,8 @@ app.post('/webhook', function (req, res) {
         res.sendStatus(200);
     }
 });
-function receivedAuthentication(event) {
+function receivedAuthentication(event) { console.log("receivedAuthentication");};
+function receivedMessage(event) {
     var senderID = event.sender.id;
     var recipientID = event.recipient.id;
     var timeOfMessage = event.timestamp;
@@ -100,8 +101,7 @@ function receivedAuthentication(event) {
         sendTextMessage(senderID, "Message with attachment received");
     }
 };
-function receivedMessage(event) {};
-function receivedDeliveryConfirmation(event) {};
+function receivedDeliveryConfirmation(event) { console.log("receivedAuthentication");};
 function receivedPostback(event) {
     var senderID = event.sender.id;
     var recipientID = event.recipient.id;
