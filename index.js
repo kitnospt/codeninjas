@@ -86,7 +86,7 @@ function receivedMessage(event) {
                 sendButtonMessage(senderID);
                 break;
 
-            case 'generic':
+            case 'gatos':
                 sendGenericMessage(senderID);
                 break;
 
@@ -165,33 +165,19 @@ function sendGenericMessage(recipientId) {
                 payload: {
                     template_type: "generic",
                     elements: [{
-                        title: "rift",
-                        subtitle: "Next-generation virtual reality",
-                        item_url: "https://www.oculus.com/en-us/rift/",
-                        image_url: "http://messengerdemo.parseapp.com/img/rift.png",
+                        title: "Gatos Fofos para o Gonçalo",
+                        subtitle: "Gatos marados",
+                        item_url: "https://www.google.pt/search?q=gatos+fofos&espv=2&biw=843&bih=699&source=lnms&tbm=isch&sa=X&ved=0ahUKEwierpvVp_7OAhVCVBQKHWJsD_0Q_AUIBigB",
+                        image_url: "https://i.ytimg.com/vi/_43lSXa1yDs/maxresdefault.jpg",
                         buttons: [{
                             type: "web_url",
-                            url: "https://www.oculus.com/en-us/rift/",
-                            title: "Open Web URL"
+                            url: "http://4.bp.blogspot.com/_G8Y6v7R9oBU/S_BBXNOFiWI/AAAAAAAAABY/WjTTES4Sa8Y/s1600/gaja+boa.jpg",
+                            title: "Quero é gajas..."
                         }, {
-                            type: "postback",
-                            title: "Call Postback",
-                            payload: "Payload for first bubble",
+                            type: "web_url",
+                            url: "http://www.circolare.com.br/uploads/2013/04/Captura-de-tela-inteira-02042013-150636.jpg",
+                            title: "Mais Gatos"
                         }],
-                    }, {
-                        title: "touch",
-                        subtitle: "Your Hands, Now in VR",
-                        item_url: "https://www.oculus.com/en-us/touch/",
-                        image_url: "http://messengerdemo.parseapp.com/img/touch.png",
-                        buttons: [{
-                            type: "web_url",
-                            url: "https://www.oculus.com/en-us/touch/",
-                            title: "Open Web URL"
-                        }, {
-                            type: "postback",
-                            title: "Call Postback",
-                            payload: "Payload for second bubble",
-                        }]
                     }]
                 }
             }
