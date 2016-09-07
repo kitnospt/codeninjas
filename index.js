@@ -165,7 +165,7 @@ function sendGenericMessage(recipientId) {
                 payload: {
                     template_type: "generic",
                     elements: [{
-                        title: "Gatos Fofos para o Gonçalo",
+                        title: "Gatos Fofos para o Zé",
                         subtitle: "Gatos marados",
                         item_url: "https://www.google.pt/search?q=gatos+fofos&espv=2&biw=843&bih=699&source=lnms&tbm=isch&sa=X&ved=0ahUKEwierpvVp_7OAhVCVBQKHWJsD_0Q_AUIBigB",
                         image_url: "https://i.ytimg.com/vi/_43lSXa1yDs/maxresdefault.jpg",
