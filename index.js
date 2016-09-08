@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var app = express();
+var apiai = require('apiai');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -120,6 +121,19 @@ function receivedPostback(event) {
 }
 
 function sendTextMessage(recipientId, messageText) {
+    var api = apiai('e5df3993d9e448bda9845a9de80ec5d9');
+    var request = api.textRequest('Hello');
+
+    request.on('response', function(response) {
+        console.log("api.ai"+response);
+    });
+
+    request.on('error', function(error) {
+        console.log("api.ai"+error);
+    });
+
+    request.end()
+
     var messageData = {
         recipient: {
             id: recipientId
