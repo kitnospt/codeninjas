@@ -200,7 +200,7 @@ function sendGenericMessage(recipientId) {
                         title: "Gatos Fofos para o Zé",
                         subtitle: "Gatos marados",
                         item_url: "https://www.google.pt/search?q=gatos+fofos&espv=2&biw=843&bih=699&source=lnms&tbm=isch&sa=X&ved=0ahUKEwierpvVp_7OAhVCVBQKHWJsD_0Q_AUIBigB",
-                        image_url: "https://i.ytimg.com/vi/_43lSXa1yDs/maxresdefault.jpg",
+                        image_url: "http://www.zoo.pt/media/animais/mamiferos/Koala/KOALA-TOPO-2.jpg",
                         buttons: [{
                             type: "web_url",
                             url: "http://4.bp.blogspot.com/_G8Y6v7R9oBU/S_BBXNOFiWI/AAAAAAAAABY/WjTTES4Sa8Y/s1600/gaja+boa.jpg",
