@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var request = require('request');
 var app = express();
 var apiai = require('apiai');
+var util = require("util");
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -11,6 +12,23 @@ app.listen((process.env.PORT || 3000));
 // Server frontpage
 app.get('/', function (req, res) {
     res.send('This is TestBot Server');
+});
+
+app.get('/test', function (req, res) {
+    var api = apiai('e5df3993d9e448bda9845a9de80ec5d9');
+    var request = api.textRequest('Hello');
+
+    request.on('response', function(response) {
+        console.log("api.ai"+util.inspect(response));
+
+    });
+
+    request.on('error', function(error) {
+        console.log("api.ai error:"+util.inspect(error));
+    });
+
+    request.end();
+    res.send('ok');
 });
 
 // Facebook Webhook
@@ -132,7 +150,7 @@ function sendTextMessage(recipientId, messageText) {
         console.log("api.ai"+error);
     });
 
-    request.end()
+    request.end();
 
     var messageData = {
         recipient: {
@@ -186,7 +204,7 @@ function sendGenericMessage(recipientId) {
                         buttons: [{
                             type: "web_url",
                             url: "http://4.bp.blogspot.com/_G8Y6v7R9oBU/S_BBXNOFiWI/AAAAAAAAABY/WjTTES4Sa8Y/s1600/gaja+boa.jpg",
-                            title: "Quero é gajas..."
+                            title: "Que es isto"
                         }, {
                             type: "web_url",
                             url: "http://www.circolare.com.br/uploads/2013/04/Captura-de-tela-inteira-02042013-150636.jpg",
