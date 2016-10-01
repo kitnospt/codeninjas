@@ -105,7 +105,7 @@ function receivedMessage(event) {
                 sendButtonMessage(senderID);
                 break;
 
-            case 'gatos':
+            case 'koala':
                 sendGenericMessage(senderID);
                 break;
 
