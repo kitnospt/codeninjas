@@ -197,18 +197,18 @@ function sendGenericMessage(recipientId) {
                 payload: {
                     template_type: "generic",
                     elements: [{
-                        title: "Gatos Fofos para o Zé",
-                        subtitle: "Gatos marados",
+                        title: "koalas",
+                        subtitle: "koala do jardim zoológico",
                         item_url: "https://www.google.pt/search?q=gatos+fofos&espv=2&biw=843&bih=699&source=lnms&tbm=isch&sa=X&ved=0ahUKEwierpvVp_7OAhVCVBQKHWJsD_0Q_AUIBigB",
                         image_url: "http://www.zoo.pt/media/animais/mamiferos/Koala/KOALA-TOPO-2.jpg",
                         buttons: [{
                             type: "web_url",
-                            url: "http://4.bp.blogspot.com/_G8Y6v7R9oBU/S_BBXNOFiWI/AAAAAAAAABY/WjTTES4Sa8Y/s1600/gaja+boa.jpg",
-                            title: "Que es isto"
+                            url: "http://google.com",
+                            title: "Sobre Mim"
                         }, {
                             type: "web_url",
-                            url: "http://www.circolare.com.br/uploads/2013/04/Captura-de-tela-inteira-02042013-150636.jpg",
-                            title: "Mais Gatos"
+                            url: "http://google.com",
+                            title: "Fotos"
                         }],
                     }]
                 }
