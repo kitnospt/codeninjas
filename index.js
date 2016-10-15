@@ -142,7 +142,7 @@ function receivedPostback(event) {
 
 function sendTextMessage(recipientId, messageText) {
     var api = apiai('380ae2c971f74c5f878e5140f48890b4');
-    var request = api.textRequest('Hello');
+    var request = api.textRequest(messageText);
 
     request.on('response', function(response) {
         console.log("api.ai--"+response.result.fulfillment.speech+"--");
