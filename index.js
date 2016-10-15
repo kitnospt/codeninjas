@@ -137,7 +137,7 @@ function receivedPostback(event) {
 
     // When a postback is called, we'll send a message back to the sender to
     // let them know it was successful
-    sendTextMessage(senderID, "Postback called");
+    sendTextMessage(senderID, payload);
 }
 
 function sendTextMessage(recipientId, messageText) {
@@ -200,19 +200,15 @@ function sendGenericMessage(recipientId) {
                 payload: {
                     template_type: "generic",
                     elements: [{
-                        title: "Koalas",
-                        subtitle: "O bot do Moonan",
-                        item_url: "https://www.google.pt/search?q=gatos+fofos&espv=2&biw=843&bih=699&source=lnms&tbm=isch&sa=X&ved=0ahUKEwierpvVp_7OAhVCVBQKHWJsD_0Q_AUIBigB",
+                        title: "The Animals can Talk",
+                        subtitle: "Moonan the Koala",
                         image_url: "http://www.zoo.pt/media/Destaques/koala-destaque.png",
                         buttons: [{
-                            type: "web_url",
-                            url: "http://google.com",
-                            title: "Sobre Mim"
-                        }, {
-                            type: "web_url",
-                            url: "http://google.com",
-                            title: "Fotos"
-                        }],
+                            "type":"postback",
+                            "title":"About Me",
+                            "payload":"Tell me about you"
+                        }
+                        ],
                     }]
                 }
             }
