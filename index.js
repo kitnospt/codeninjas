@@ -75,6 +75,7 @@ app.post('/webhook', function (req, res) {
     }
 });
 function receivedAuthentication(event) { console.log("receivedAuthentication");};
+
 function receivedMessage(event) {
     var senderID = event.sender.id;
     var recipientID = event.recipient.id;
@@ -121,6 +122,7 @@ function receivedMessage(event) {
     }
 };
 function receivedDeliveryConfirmation(event) { console.log("receivedAuthentication");};
+
 function receivedPostback(event) {
     var senderID = event.sender.id;
     var recipientID = event.recipient.id;
@@ -139,7 +141,7 @@ function receivedPostback(event) {
 }
 
 function sendTextMessage(recipientId, messageText) {
-    var api = apiai('e5df3993d9e448bda9845a9de80ec5d9');
+    var api = apiai('380ae2c971f74c5f878e5140f48890b4');
     var request = api.textRequest('Hello');
 
     request.on('response', function(response) {
