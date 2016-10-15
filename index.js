@@ -146,6 +146,16 @@ function sendTextMessage(recipientId, messageText) {
 
     request.on('response', function(response) {
         console.log("api.ai--"+response.result.fulfillment.speech+"--");
+        var messageData = {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                text: response.result.fulfillment.speech
+            }
+        };
+
+        callSendAPI(messageData);
     });
 
     request.on('error', function(error) {
@@ -154,16 +164,7 @@ function sendTextMessage(recipientId, messageText) {
 
     request.end();
 
-    var messageData = {
-        recipient: {
-            id: recipientId
-        },
-        message: {
-            text: messageText
-        }
-    };
 
-    callSendAPI(messageData);
 }
 
 function callSendAPI(messageData) {
