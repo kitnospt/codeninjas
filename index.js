@@ -145,7 +145,7 @@ function sendTextMessage(recipientId, messageText) {
     var request = api.textRequest('Hello');
 
     request.on('response', function(response) {
-        console.log("api.ai--"+response.result.source+"--");
+        console.log("api.ai--"+response.result.fulfillment.speech+"--");
     });
 
     request.on('error', function(error) {
